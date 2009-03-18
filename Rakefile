@@ -11,7 +11,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = project_name
-    gem.summary = "Ruby: sort UTF8 Strings alphabetical via Enumerable extension"
+    gem.summary = "Sort UTF8 Strings alphabetical via Enumerable extension"
     gem.email = "grosser.michael@gmail.com"
     gem.homepage = "http://github.com/grosser/#{project_name}"
     gem.authors = ["Michael Grosser"]
