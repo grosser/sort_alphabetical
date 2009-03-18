@@ -1,5 +1,5 @@
-Adds .sort_alphabetical and .sort_alphabetical_by to enumberable, which
-sorts a Enumberable (Array/Hash...) of UTF8 Strings alphabetical.  
+Adds `sort_alphabetical` and `sort_alphabetical_by` to Enumberable(Array/Hash...),  
+which sorts UTF8 Strings alphabetical.  
 This sorting is done by placing variants on the same level as base character (A comes before Ä but ÄA comes before AB).
 
     ['b','á'].sort_alphabetical == ['á','b']
