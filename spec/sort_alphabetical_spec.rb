@@ -1,12 +1,6 @@
-if version = ENV['ACTIVE_SUPPORT_VERSION']
-  gem 'activesupport', version
-  version = "(AS: #{version})"
-else
-  gem 'activesupport', '>=2.3'
-end
-require File.expand_path("spec_helper", File.dirname(__FILE__))
+require 'spec/spec_helper'
 
-describe "SortAlphabetical #{version}"do
+describe "SortAlphabetical"do
   it "sorts ascii correctly" do
     %w(b c a).sort_alphabetical.should == %w(a b c)
   end
@@ -23,7 +17,8 @@ describe "SortAlphabetical #{version}"do
     %w(hellö hello hellá).sort_alphabetical.should == %w(hellá hello hellö)
   end
 
-  pending_it "obeys order for ligatures" do
+  it "obeys order for ligatures" do
+    pending
     %w(asb aßc asd).sort_alphabetical.should == %w(asb aßc asd)
   end
 
