@@ -1,0 +1,1 @@
+require 'sort_alphabetical'
