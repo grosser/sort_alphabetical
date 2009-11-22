@@ -6,7 +6,7 @@ This sorting is done by placing variants on the same level as base character (A 
 Setup
 =====
  - As Rails plugin: `script/plugin install git://github.com/grosser/sort_alphabetical.git `
- - As gem: ` sudo gem install sort_alphabetical -s http://gemcutter.org `
+ - As gem: ` sudo gem install sort_alphabetical `
 
 Usage
 =====

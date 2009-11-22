@@ -13,6 +13,8 @@ begin
     gem.authors = ["Michael Grosser"]
     gem.add_dependency "activesupport"
   end
+
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler, or one of its dependencies, is not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
