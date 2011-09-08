@@ -1,4 +1,5 @@
-require 'spec/spec_helper'
+# -*- encoding: utf-8 -*-
+require 'spec_helper'
 
 describe "SortAlphabetical"do
   it "sorts ascii correctly" do
