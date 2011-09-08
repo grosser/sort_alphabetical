@@ -23,6 +23,10 @@ describe "SortAlphabetical"do
     %w(asb aßc asd).sort_alphabetical.should == %w(asb aßc asd)
   end
 
+  it "sorts ˇ" do
+    ["ˇ"].sort_alphabetical.should == ["ˇ"]
+  end
+
   describe :to_ascii do
     it "removes any accents" do
       SortAlphabetical.to_ascii('á').should == 'a'
