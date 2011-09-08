@@ -5,7 +5,7 @@ This sorting is done by placing variants on the same level as base character (A 
 
 Setup
 =====
- - As Rails plugin: `script/plugin install git://github.com/grosser/sort_alphabetical.git `
+ - As Rails plugin: `rails plugin install git://github.com/grosser/sort_alphabetical.git `
  - As gem: ` sudo gem install sort_alphabetical `
 
 Usage
@@ -22,6 +22,6 @@ Authors
 =======
  - original string_to_ascii: [Marc-Andre](http://marc-andre.ca/).
 
-[Michael Grosser](http://pragmatig.wordpress.com)  
-grosser.michael@gmail.com  
+[Michael Grosser](http://grosser.it)<br/>
+michael@grosser.it<br/>
 Hereby placed under public domain, do what you want, just do not hold me accountable...  
