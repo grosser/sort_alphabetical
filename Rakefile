@@ -1,6 +1,6 @@
 task :default do
-  sh "RAILS='~>2' bundle &&  bundle exec rspec spec"
-  sh "RAILS='~>3' bundle &&  bundle exec rspec spec"
+  sh "RAILS='~>2' && (bundle || bundle install) &&  bundle exec rspec spec"
+  sh "RAILS='~>3' && (bundle || bundle install) &&  bundle exec rspec spec"
 end
 
 begin
