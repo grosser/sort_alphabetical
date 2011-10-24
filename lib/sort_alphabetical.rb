@@ -1,5 +1,8 @@
 # TODO do something like with_utf8 do ...
-$KCODE = 'UTF8' # otherwise mb_chars produces normal strings
+
+if RUBY_VERSION < "1.9"
+  $KCODE = 'UTF8' # otherwise mb_chars produces normal strings
+end
 
 require 'active_support/version'
 if ActiveSupport::VERSION::MAJOR > 2
@@ -26,7 +29,7 @@ module SortAlphabetical
   end
 
   def to_ascii(string)
-    split_codepoints(string).map(&:to_s).reject{|e| e.length > 1}.join
+    split_codepoints(string).reject{|e| e.bytes.to_a.length > 1}.join
   end
 
   private
