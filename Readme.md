@@ -16,7 +16,6 @@ Usage
 
 TODO
 ====
- - fix specs for 1.9
  - Sort non-ascii-convertables like ß(ss), œ(oe) , ﬁ(fi), see [Ligatures](http://en.wikipedia.org/wiki/Typographical_ligature)
  - Integrate natural sorting e.g. `['a11', 'a2'] => ['a2', 'a11']` like [NaturalSort](http://rubyforge.org/projects/naturalsort)
 
