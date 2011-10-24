@@ -23,7 +23,10 @@ TODO
 Authors
 =======
  - original string_to_ascii: [Marc-Andre](http://marc-andre.ca/).
+ - [Maxime Menant](https://github.com/maxime-menant)
 
 [Michael Grosser](http://grosser.it)<br/>
 michael@grosser.it<br/>
-Hereby placed under public domain, do what you want, just do not hold me accountable...
+Hereby placed under public domain, do what you want, just do not hold me accountable...<br/>
+[![Build Status](https://secure.travis-ci.org/grosser/sort_alphabetical.png)](http://travis-ci.org/grosser/sort_alphabetical)
+
