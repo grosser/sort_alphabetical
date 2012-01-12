@@ -39,5 +39,15 @@ describe "SortAlphabetical"do
         %w(za yá xä xa).sort_alphabetical_by{|x|x.chars.to_a.reverse.join}.should == %w(xa xä yá za)
       end
     end
+
+    it "sorts arrays" do
+      [
+        ["B", "A"],
+        ["A", "B"],
+      ].sort_alphabetical_by{|x| x }.should == [
+        ["A", "B"],
+        ["B", "A"]
+      ]
+    end
   end
 end
