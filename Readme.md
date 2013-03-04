@@ -14,6 +14,15 @@ Usage
 
     SortAlphabetical.to_ascii('á') == 'a'
 
+Alternative
+===========
+
+Use [ICU](https://github.com/jarib/ffi-icu)
+```Ruby
+collator = ICU::Collation::Collator.new("nb")
+array.sort! { |a,b| collator.compare(a, b) }
+```
+
 TODO
 ====
  - Sort non-ascii-convertables like ß(ss), œ(oe) , ﬁ(fi), see [Ligatures](http://en.wikipedia.org/wiki/Typographical_ligature)
