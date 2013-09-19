@@ -12,7 +12,7 @@ Usage
     ['b','á'].sort_alphabetical == ['á','b']
     [['b',1],['á',2]].sort_alphabetical_by(&:first) == [['á',2],['b',1]]
 
-    SortAlphabetical.to_ascii('á') == 'a'
+    SortAlphabetical.normalize('á') == 'a'
 
 Alternative
 ===========

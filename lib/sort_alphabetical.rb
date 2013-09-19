@@ -1,6 +1,7 @@
 # TODO do something like with_utf8 do ...
 
-require 'active_support/core_ext/string/multibyte'
+require 'unicode_utils/compatibility_decomposition'
+require 'unicode_utils/general_category'
 require 'sort_alphabetical/core_ext'
 
 module SortAlphabetical
@@ -13,18 +14,13 @@ module SortAlphabetical
       else
         item = item.to_s
       end
-      [to_ascii(item), item] # when both á and a are present, sort them a, á
+      [normalize(item), item] # when both á and a are present, sort them a, á
     end
   end
 
-  def to_ascii(string)
-    split_codepoints(string).reject{ |e| e.bytes.to_a.length > 1 }.join
-  end
-
-  private
-
-  # returns an array of unicode codepoints, in canonical order
-  def split_codepoints(string)
-    string.mb_chars.normalize(:d).split(//u)
+  def normalize(string)
+    UnicodeUtils.compatibility_decomposition(string).split('').select do |c|
+      UnicodeUtils.general_category(c) =~ /Letter|Separator|Punctuation|Number/
+    end.join
   end
 end
