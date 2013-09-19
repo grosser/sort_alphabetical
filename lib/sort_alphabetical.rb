@@ -1,17 +1,6 @@
 # TODO do something like with_utf8 do ...
 
-if RUBY_VERSION < "1.9"
-  $KCODE = 'UTF8' # otherwise mb_chars produces normal strings
-end
-
-require 'active_support/version'
-if ActiveSupport::VERSION::MAJOR > 2
-  # pick what we need
-  require 'active_support/core_ext/string/multibyte'
-else
-  # load everything, its a mess in there ...
-  require 'active_support'
-end
+require 'active_support/core_ext/string/multibyte'
 require 'sort_alphabetical/core_ext'
 
 module SortAlphabetical
@@ -24,12 +13,12 @@ module SortAlphabetical
       else
         item = item.to_s
       end
-      [to_ascii(item),item]#when both á and a are present, sort them a, á
+      [to_ascii(item), item] # when both á and a are present, sort them a, á
     end
   end
 
   def to_ascii(string)
-    split_codepoints(string).reject{|e| e.bytes.to_a.length > 1}.join
+    split_codepoints(string).reject{ |e| e.bytes.to_a.length > 1 }.join
   end
 
   private
