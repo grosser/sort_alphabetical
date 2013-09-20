@@ -5,9 +5,10 @@ PATH
       unicode_utils (>= 1.0.0)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     diff-lcs (1.1.3)
+    rake (10.0.4)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -22,5 +23,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rake (>= 2.0.0)
   rspec (>= 2.0.0)
   sort_alphabetical!

@@ -16,5 +16,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'unicode_utils', '>= 1.0.0'
   s.add_development_dependency 'rspec', '>= 2.0.0'
+  s.add_development_dependency 'rake' , '>= 2.0.0'
 end
-
