@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sort_alphabetical (0.1.4)
+    sort_alphabetical (1.0.0)
       unicode_utils (>= 1.0.0)
 
 GEM
