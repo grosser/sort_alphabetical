@@ -1,20 +1,16 @@
-# -*- encoding: utf-8 -*-
+name = "sort_alphabetical"
 
-Gem::Specification.new do |s|
-  s.name = 'sort_alphabetical'
-  s.version = '0.1.4'
-  s.required_ruby_version = '>= 1.9.0'
-
-  s.authors = ['Michael Grosser']
-  s.date = '2013-09-19'
-  s.email = 'michael@grosser.it'
-  s.files = Dir.glob('**/*')
-  s.homepage = 'http://github.com/grosser/sort_alphabetical'
-  s.require_paths = ['lib']
-
+Gem::Specification.new name, '0.1.4' do |s|
   s.summary = 'Sort UTF8 Strings alphabetical via Enumerable extension'
-
+  s.authors = ["Michael Grosser"]
+  s.email = "michael@grosser.it"
+  s.homepage = "https://github.com/grosser/#{name}"
+  s.files = `git ls-files lib`.split("\n")
+  s.license = "MIT"
   s.add_dependency 'unicode_utils', '>= 1.0.0'
-  s.add_development_dependency 'rspec', '>= 2.0.0'
-  s.add_development_dependency 'rake' , '>= 2.0.0'
+  key = File.expand_path("~/.ssh/gem-private_key.pem")
+  if File.exist?(key)
+    s.signing_key = key
+    s.cert_chain = ["gem-public_cert.pem"]
+  end
 end

@@ -1,3 +1,5 @@
+require "bundler/setup"
+
 task :default do
-  sh "bundle &&  bundle exec rspec spec"
+  sh "rspec spec"
 end
