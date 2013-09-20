@@ -2,9 +2,12 @@ Adds `sort_alphabetical` and `sort_alphabetical_by` to Enumberable(Array/Hash...
 which sorts UTF8 Strings alphabetical.
 This sorting is done by placing variants on the same level as base character (A comes before Ä but ÄA comes before AB).
 
+Requirements
+=====
+ - Ruby >= 1.9
+
 Setup
 =====
- - As Rails plugin: `rails plugin install git://github.com/grosser/sort_alphabetical.git `
  - As gem: ` sudo gem install sort_alphabetical `
 
 Usage
@@ -12,7 +15,7 @@ Usage
     ['b','á'].sort_alphabetical == ['á','b']
     [['b',1],['á',2]].sort_alphabetical_by(&:first) == [['á',2],['b',1]]
 
-    SortAlphabetical.to_ascii('á') == 'a'
+    SortAlphabetical.normalize('á') == 'a'
 
 Alternative
 ===========
