@@ -1,6 +1,6 @@
 name = "sort_alphabetical"
 
-Gem::Specification.new name, '1.0.0' do |s|
+Gem::Specification.new name, '1.0.1' do |s|
   s.summary = 'Sort UTF8 Strings alphabetical via Enumerable extension'
   s.authors = ["Michael Grosser"]
   s.email = "michael@grosser.it"
