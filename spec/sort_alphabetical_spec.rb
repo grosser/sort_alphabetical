@@ -19,9 +19,8 @@ describe "SortAlphabetical"do
   end
 
   it "obeys order for ligatures" do
-    pending do
-      %w(asb aßc asd).sort_alphabetical.should == %w(asb aßc asd)
-    end
+    pending
+    %w(asb aßc asd).sort_alphabetical.should == %w(asb aßc asd)
   end
 
   it "sorts ˇ" do
