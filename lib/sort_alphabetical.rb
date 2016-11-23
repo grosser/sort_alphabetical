@@ -1,3 +1,4 @@
+# frozen-string-literal: true
 # TODO do something like with_utf8 do ...
 
 require 'unicode_utils/compatibility_decomposition'
