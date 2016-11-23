@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sort_alphabetical (1.0.2)
+    sort_alphabetical (1.1.0)
       unicode_utils (>= 1.2.2)
 
 GEM
@@ -37,4 +37,4 @@ DEPENDENCIES
   sort_alphabetical!
 
 BUNDLED WITH
-   1.10.5
+   1.13.6
