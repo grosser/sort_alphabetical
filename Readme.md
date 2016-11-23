@@ -36,6 +36,7 @@ TODO
  - original string_to_ascii: [Marc-Andre](http://marc-andre.ca/).
  - [Maxime Menant](https://github.com/maxime-menant)
  - [Victor D.](https://github.com/V1c70r)
+ - [Andrii Malyshko](https://github.com/nashbridges)
 
 [Michael Grosser](http://grosser.it)<br/>
 michael@grosser.it<br/>
