@@ -7,6 +7,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    benchmark-ips (2.5.0)
     bump (0.5.2)
     diff-lcs (1.2.5)
     rake (10.4.2)
@@ -29,6 +30,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  benchmark-ips
   bump
   rake
   rspec

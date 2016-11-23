@@ -19,8 +19,12 @@ module SortAlphabetical
   end
 
   def normalize(string)
-    UnicodeUtils.compatibility_decomposition(string).split(''.freeze).select do |c|
-      UnicodeUtils.general_category(c) =~ /Letter|Separator|Punctuation|Number/
-    end.join
+    result = String.new
+    UnicodeUtils.compatibility_decomposition(string).each_char do |c|
+      if UnicodeUtils.general_category(c) =~ /Letter|Separator|Punctuation|Number/
+        result << c
+      end
+    end
+    result
   end
 end
