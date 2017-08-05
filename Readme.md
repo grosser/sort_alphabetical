@@ -2,25 +2,28 @@ Adds `sort_alphabetical` and `sort_alphabetical_by` to Enumberable(Array/Hash...
 which sorts UTF8 Strings alphabetical.
 This sorting is done by placing variants on the same level as base character (A comes before Ä but ÄA comes before AB).
 
-Requirements
-=====
- - Ruby >= 1.9
-
 Setup
 =====
- - As gem: ` sudo gem install sort_alphabetical `
+
+```Bash
+gem install sort_alphabetical
+```
 
 Usage
 =====
-    ['b','á'].sort_alphabetical == ['á','b']
-    [['b',1],['á',2]].sort_alphabetical_by(&:first) == [['á',2],['b',1]]
 
-    SortAlphabetical.normalize('á') == 'a'
+```Ruby
+['b','á'].sort_alphabetical == ['á','b']
+[['b',1],['á',2]].sort_alphabetical_by(&:first) == [['á',2],['b',1]]
+
+SortAlphabetical.normalize('á') == 'a'
+```
 
 Alternative
 ===========
 
 Use [ICU](https://github.com/jarib/ffi-icu)
+
 ```Ruby
 collator = ICU::Collation::Collator.new("nb")
 array.sort! { |a,b| collator.compare(a, b) }
